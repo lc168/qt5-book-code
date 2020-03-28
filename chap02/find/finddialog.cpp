@@ -30,24 +30,25 @@ FindDialog::FindDialog(QWidget *parent)
     topLeftLayout->addWidget(lineEdit);
 
     QVBoxLayout *leftLayout = new QVBoxLayout;
-    leftLayout->addLayout(topLeftLayout);
+    leftLayout->addLayout(topLeftLayout);//good!
     leftLayout->addWidget(caseCheckBox);
     leftLayout->addWidget(backwardCheckBox);
 
     QVBoxLayout *rightLayout = new QVBoxLayout;
     rightLayout->addWidget(findButton);
     rightLayout->addWidget(closeButton);
-    rightLayout->addStretch();
+    rightLayout->addStretch();//good!
 
     QHBoxLayout *mainLayout = new QHBoxLayout;
     mainLayout->addLayout(leftLayout);
     mainLayout->addLayout(rightLayout);
-    setLayout(mainLayout);
+    setLayout(mainLayout);  //good!
 
     setWindowTitle(tr("Find"));
-    setFixedHeight(sizeHint().height());
+    setFixedHeight(sizeHint().height());//good!
 }
 
+//写的好！！！！！！！！！
 void FindDialog::findClicked()
 {
     QString text = lineEdit->text();
@@ -60,7 +61,7 @@ void FindDialog::findClicked()
         emit findNext(text, cs);
     }
 }
-
+//不错！！
 void FindDialog::enableFindButton(const QString &text)
 {
     findButton->setEnabled(!text.isEmpty());

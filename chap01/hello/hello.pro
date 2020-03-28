@@ -11,3 +11,5 @@ QT += widgets
 
 # Input
 SOURCES += hello.cpp
+
+win32: LIBS += -LC:\Qt\Qt5.14.0\5.14.0\msvc2017_64\lib

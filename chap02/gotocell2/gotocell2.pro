@@ -13,3 +13,5 @@ QT += widgets
 HEADERS += gotocelldialog.h
 FORMS += gotocelldialog.ui
 SOURCES += gotocelldialog.cpp main.cpp
+
+win32: LIBS += -LC:\Qt\Qt5.14.0\5.14.0\msvc2017_64\lib
